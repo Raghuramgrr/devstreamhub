@@ -1,0 +1,29 @@
+# values.yaml
+
+# Docker image configuration
+image:
+  repository: raghuramgrr/dev-stream-hub-with-tools
+  tag: 1.0.0
+  pullPolicy: IfNotPresent
+
+# Deployment configuration
+replicaCount: 2
+
+# Service configuration
+service:
+  type: ClusterIP
+  port: 80
+
+# Resource limits
+resources:
+  limits:
+    cpu: 500m
+    memory: 512Mi
+  requests:
+    cpu: 250m
+    memory: 256Mi
+
+# Additional environment variables
+env:
+  - name: APP_ENV
+    value: production
